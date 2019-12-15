@@ -9,7 +9,7 @@ const twitterClient = new twitter({
 });
 
 exports.handler = (event, context, callback) => {
-  const tweet = 'test\ntweet';
+  const tweet = '【訃報】伊藤将史 死去\n今後予定されている飲み会やイベントには参加できなくなってしまいました…\n急に連絡なく来なくてもドタキャンではありません！\n本当に今までありがとうございました！\n\nこれは自動ツイートのため返信できません';
   twitterClient.post('statuses/update', { status: tweet },
     function(error, tweet, response) {
       if(error) {
